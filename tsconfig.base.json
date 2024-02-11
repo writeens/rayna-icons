@@ -4,13 +4,12 @@
     "moduleResolution": "Node",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "lib": ["ESNext", "DOM"],
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
-    "outDir": "build",
+    "outDir": "build"
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }

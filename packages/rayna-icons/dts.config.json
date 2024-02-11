@@ -1,0 +1,8 @@
+{
+  "entries": [
+    {
+      "filePath": "./src/index.ts",
+      "outFile": "./build/index.d.ts"
+    }
+  ]
+}
