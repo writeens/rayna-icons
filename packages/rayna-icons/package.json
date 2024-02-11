@@ -8,7 +8,8 @@
     "build:iconfiles": "tsx ./scripts/build-icons --outputDirectory=src/__generated__ --rawIconDirectory=../../icons",
     "build:icons": "pnpm build:clean && pnpm build:iconfiles && tsc --noEmit",
     "build:types": "dts-bundle-generator --config ./dts.config.json",
-    "build": "pnpm build:icons && vite build && pnpm build:types"
+    "build": "pnpm build:icons && vite build && pnpm build:types",
+    "test": "vitest"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
@@ -23,6 +24,7 @@
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
+    "vitest": "^1.2.2",
     "yargs": "^17.7.2"
   }
 }

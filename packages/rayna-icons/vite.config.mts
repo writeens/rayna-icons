@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import path from "path";
 import { defineConfig } from "vite";
 
@@ -20,6 +21,10 @@ export default defineConfig({
         }
       },
       formats: ["es", "cjs"],
+    },
+    test: {
+      globals: true,
+      environment: "node",
     },
     outDir: "build",
   },
