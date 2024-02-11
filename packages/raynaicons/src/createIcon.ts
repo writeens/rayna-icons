@@ -1,4 +1,5 @@
-import { IconNode, RaynaIcon, RaynaIconAttributes } from "./types";
+import { IconNode } from "@writeens/build-icons";
+import { RaynaIcon, RaynaIconAttributes } from "./types";
 
 const toSVG = (icon: IconNode) => (attributes?: RaynaIconAttributes) => {
   const {
