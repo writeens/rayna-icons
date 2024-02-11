@@ -1,8 +1,10 @@
 {
   "name": "rayna",
-  "private":true,
-  "scripts": {
-  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {},
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
