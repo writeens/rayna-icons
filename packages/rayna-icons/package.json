@@ -7,7 +7,9 @@
   "types": "./build/index.d.ts",
   "files": [
     "build",
-    "package.json"
+    "package.json",
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "build:clean": "rimraf build && rimraf src/icons",
