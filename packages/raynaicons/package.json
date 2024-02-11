@@ -1,12 +1,12 @@
 {
-  "name": "@rayna/rayna-icons",
+  "name": "@writeens/raynaicons",
   "version": "0.0.0",
   "license": "MIT",
   "author": {
     "name": "Adewusi Victor",
     "email": "adewusi.victorg@gmail.com"
   },
-  "repository": "writeens/rayna-icons",
+  "repository": "@writeens/rayna-icons",
   "main": "./build/index.cjs",
   "module": "./build/index.mjs",
   "types": "./build/index.d.ts",

@@ -1,12 +1,11 @@
 {
-  "name": "@rayna-icons/monorepo",
-  "version": "0.0.0",
+  "name": "@writeens/raynaicons-monorepo",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "build:rayna-icons": "pnpm --filter @rayna/rayna-icons build",
+    "build:rayna-icons": "pnpm --filter @writeens/raynaicons build",
     "build": "pnpm -r build",
     "changeset:run": "changeset",
     "changeset:version": "changeset version",
