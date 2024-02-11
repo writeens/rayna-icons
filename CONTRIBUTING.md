@@ -1,1 +1,0 @@
-# Rayna Icons Contribution Guidelines
