@@ -2,13 +2,20 @@
   "name": "@rayna/rayna-icons",
   "version": "0.0.0",
   "license": "MIT",
-  "files": [],
+  "main": "./build/index.cjs",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build",
+    "package.json"
+  ],
   "scripts": {
     "build:clean": "rimraf build && rimraf src/icons",
     "build:iconfiles": "tsx ./scripts/build-icons --outputDirectory=src/__generated__ --rawIconDirectory=../../icons",
     "build:icons": "pnpm build:clean && pnpm build:iconfiles && tsc --noEmit",
     "build:types": "dts-bundle-generator --config ./dts.config.json",
     "build": "pnpm build:icons && vite build && pnpm build:types",
+    "dev": "vite serve ./public",
     "test": "vitest"
   },
   "devDependencies": {
