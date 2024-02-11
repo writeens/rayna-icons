@@ -22,11 +22,13 @@
     "build:types": "dts-bundle-generator --config ./dts.config.json",
     "build": "pnpm build:icons && vite build && pnpm build:types",
     "dev": "vite serve ./public",
-    "test": "vitest"
+    "test": "vitest",
+    "test:size": "bundlesize"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/yargs": "^17.0.32",
+    "bundlesize": "^0.18.1",
     "cheerio": "^1.0.0-rc.12",
     "dts-bundle-generator": "^9.3.1",
     "fs-extra": "^11.2.0",

@@ -1,0 +1,12 @@
+{
+  "files": [
+    {
+      "path": "build/index.cjs",
+      "maxSize": "1.05 kB"
+    },
+    {
+      "path": "build/index.mjs",
+      "maxSize": "1.05 kB"
+    }
+  ]
+}
