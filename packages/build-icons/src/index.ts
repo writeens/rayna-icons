@@ -6,14 +6,29 @@ import {
   GENERATED_HEADER,
   getContentForIconFile,
 } from "./getContentForIconFile";
-import { getArguments } from "./helper";
 import { optimizeSVG } from "./optimizeSVG";
 
-/** Main entrypoint for the build:icons script */
-const main = () => {
-  /** Get the arguments from the command line */
-  const { outputDirectory, rawIconDirectory } = getArguments();
+export type IconNode = {
+  name: string;
+  componentName: string;
+  type: "filled" | "outlined";
+  width: number;
+  height: number;
+  viewBox: string;
+  keywords: string[];
+  path: string;
+};
 
+export type BuildOptions = {
+  outputDirectory: string;
+  rawIconDirectory: string;
+};
+
+/** Build icon files from icons and append their exports to a barrel file */
+export const buildIconFiles = ({
+  outputDirectory,
+  rawIconDirectory,
+}: BuildOptions) => {
   const exportsFileLocation = path.join(outputDirectory, "index.ts");
 
   const filePattern = path.join(rawIconDirectory, "*", "*.svg");
@@ -56,6 +71,3 @@ const main = () => {
       console.error(error);
     });
 };
-
-/** Start the script */
-main();

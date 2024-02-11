@@ -1,5 +1,5 @@
 import prettier from "prettier";
-import { IconNode } from "../../src/types";
+import { IconNode } from ".";
 
 export const getContentForIconExport = async (icon: IconNode) => {
   const importString = `export { default as ${icon.componentName} } from './${icon.name}';\n`;

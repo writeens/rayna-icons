@@ -27,5 +27,6 @@ export default defineConfig({
       environment: "node",
     },
     outDir: "build",
+    copyPublicDir: false,
   },
 });

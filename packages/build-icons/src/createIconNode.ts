@@ -1,9 +1,9 @@
 /* eslint-disable import/no-relative-packages */
 import { load } from "cheerio";
-import keywordJSON from "../../../../keywords.json" assert { type: "json" };
-import { IconNode } from "../../src/types";
+import keywordJSON from "../../../keywords.json" assert { type: "json" };
 import { iconNameToPascalCase } from "./helper";
 import { optimizeSVG } from "./optimizeSVG";
+import { IconNode } from ".";
 
 const keywords = keywordJSON as Record<string, string[]>;
 

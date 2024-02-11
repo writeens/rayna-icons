@@ -1,0 +1,22 @@
+{
+  "name": "@writeens/build-icons",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Adewusi Victor",
+    "email": "adewusi.victorg@gmail.com"
+  },
+  "repository": "@writeens/rayna-icons",
+  "main": "./src/index.ts",
+  "types": "./src/index.d.ts",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.2.0",
+    "globby": "^14.0.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "svgo": "^3.2.0"
+  }
+}

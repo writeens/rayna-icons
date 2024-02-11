@@ -1,5 +1,5 @@
 import prettier from "prettier";
-import { IconNode } from "../../src/types";
+import { IconNode } from ".";
 
 export const GENERATED_HEADER = "/* THIS FILE IS GENERATED. DO NOT EDIT IT. */";
 
