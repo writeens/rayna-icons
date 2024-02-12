@@ -11,5 +11,5 @@
     "resolveJsonModule": true,
     "outDir": "build"
   },
-  "exclude": ["vite.config.mts", "public"]
+  "include": ["src"]
 }
