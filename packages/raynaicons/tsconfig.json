@@ -1,4 +1,15 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "include": ["src"]
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "outDir": "build"
+  },
+  "exclude": ["vite.config.mts", "public"]
 }
