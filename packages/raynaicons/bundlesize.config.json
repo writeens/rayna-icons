@@ -2,11 +2,11 @@
   "files": [
     {
       "path": "build/index.cjs",
-      "maxSize": "1.15 kB"
+      "maxSize": "1.2 kB"
     },
     {
       "path": "build/index.mjs",
-      "maxSize": "1.16 kB"
+      "maxSize": "1.2 kB"
     }
   ]
 }
