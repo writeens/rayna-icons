@@ -1,5 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import { load } from "cheerio";
+import { parseSync } from "svgson";
 import keywordJSON from "../../../keywords.json" assert { type: "json" };
 import { iconNameToPascalCase } from "./helper";
 import { optimizeSVG } from "./optimizeSVG";
@@ -16,6 +17,7 @@ export const createIconNode = (
   const SVGViewBox = SVGElement.attr("viewBox") || "";
   const SVGPath = SVGElement.html() ?? "";
   const SVGName = `${svg.fileName}-${svg.type}`;
+  const ast = parseSync(svg.content);
 
   if (!SVGHeight) {
     throw new Error(`${SVGName}: Missing height attribute.`);
@@ -56,11 +58,16 @@ export const createIconNode = (
   return {
     name: SVGName,
     componentName: iconNameToPascalCase(SVGName),
-    type: svg.type,
     width: SVGWidth,
     height: SVGHeight,
     viewBox: SVGViewBox,
     keywords: keywords[svg.fileName],
     path: SVGPath,
+    ast: {
+      children: ast.children.map((node) => ({
+        name: node.name,
+        attributes: node.attributes,
+      })),
+    },
   };
 };

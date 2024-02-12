@@ -1,5 +1,6 @@
 import path from "path";
 import { appendFile, outputFile, outputFileSync } from "fs-extra";
+import { INode } from "svgson";
 import { createIconNode } from "./createIconNode";
 import { getContentForIconExport } from "./getContentForIconExport";
 import {
@@ -8,26 +9,11 @@ import {
 } from "./getContentForIconFile";
 import { optimizeSVG } from "./optimizeSVG";
 
-export type IconNode = {
-  name: string;
-  componentName: string;
-  type: "filled" | "outlined";
-  width: number;
-  height: number;
-  viewBox: string;
-  keywords: string[];
-  path: string;
-};
-
-export type BuildOptions = {
-  outputDirectory: string;
-  rawIconDirectory: string;
-};
-
 /** Build icon files from icons and append their exports to a barrel file */
 export const buildIconFiles = ({
   outputDirectory,
   rawIconDirectory,
+  // eslint-disable-next-line no-use-before-define
 }: BuildOptions) => {
   const exportsFileLocation = path.join(outputDirectory, "index.ts");
 
@@ -70,4 +56,22 @@ export const buildIconFiles = ({
     .catch((error) => {
       console.error(error);
     });
+};
+
+export type IconNode = {
+  name: string;
+  componentName: string;
+  width: number;
+  height: number;
+  viewBox: string;
+  keywords: string[];
+  path: string;
+  ast: {
+    children: Pick<INode, "name" | "attributes">[];
+  };
+};
+
+export type BuildOptions = {
+  outputDirectory: string;
+  rawIconDirectory: string;
 };
