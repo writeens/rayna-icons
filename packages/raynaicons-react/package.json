@@ -1,0 +1,51 @@
+{
+  "name": "@writeens/raynaicons-react",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Victor Adewusi",
+    "email": "adewusi.victorg@gmail.com"
+  },
+  "repository": "@writeens/raynaicons",
+  "main": "./build/index.cjs",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build:clean": "rimraf build && rimraf ./src/__generated__",
+    "build:iconfiles": "tsx ./scripts/build.ts",
+    "build:icons": "pnpm build:clean && pnpm build:iconfiles && tsc --noEmit",
+    "build:types": "dts-bundle-generator --config ./dts.config.json",
+    "build": "pnpm build:icons && vite build && pnpm build:types && pnpm test:size",
+    "test:size": "bundlesize"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@writeens/build-icons": "workspace:*",
+    "dts-bundle-generator": "^9.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
+  },
+  "keywords": [
+    "React Icons",
+    "Icon",
+    "Icons",
+    "Raynaui",
+    "Rayna",
+    "HTML",
+    "Icons",
+    "SVG"
+  ],
+  "peerDependencies": {
+    "react": "^16.13.0 || ^17.0.0 || ^18.0.0"
+  }
+}
