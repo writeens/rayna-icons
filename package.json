@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "build:raynaicons": "pnpm --filter @writeens/raynaicons build",
+    "build:raynaicons-react": "pnpm --filter @writeens/raynaicons-react build",
     "build": "pnpm -r build",
     "changeset:run": "changeset",
     "changeset:version": "changeset version",
