@@ -21,7 +21,7 @@
     "build:iconfiles": "tsx ./scripts/build.ts",
     "build:icons": "pnpm build:clean && pnpm build:iconfiles && tsc --noEmit",
     "build:types": "dts-bundle-generator --config ./dts.config.json",
-    "build": "pnpm build:icons && vite build && pnpm build:types && pnpm test:size && pnpm test",
+    "build": "pnpm build:icons && vite build && pnpm build:types && pnpm test:size",
     "dev": "vite serve ./public",
     "test": "vitest run",
     "test:watch": "vitest",
