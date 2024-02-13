@@ -22,11 +22,17 @@
     "build:icons": "pnpm build:clean && pnpm build:iconfiles && tsc --noEmit",
     "build:types": "dts-bundle-generator --config ./dts.config.json",
     "build": "pnpm build:icons && vite build && pnpm build:types && pnpm test:size",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "test:size": "bundlesize"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
     "@types/react": "^18.2.55",
+    "@vitejs/plugin-react": "^4.2.1",
     "@writeens/build-icons": "workspace:*",
+    "jsdom": "^24.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
