@@ -58,7 +58,7 @@ export const buildIconFiles = ({
     });
 };
 
-export type ASTNode = Pick<INode, "name" | "attributes">;
+type ASTNode = Pick<INode, "name" | "attributes">;
 
 export type IconNode = {
   name: string;
