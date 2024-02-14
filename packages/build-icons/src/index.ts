@@ -58,6 +58,8 @@ export const buildIconFiles = ({
     });
 };
 
+export type ASTNode = Pick<INode, "name" | "attributes">;
+
 export type IconNode = {
   name: string;
   componentName: string;
@@ -65,9 +67,9 @@ export type IconNode = {
   height: number;
   viewBox: string;
   keywords: string[];
-  path: string;
   ast: {
-    children: Pick<INode, "name" | "attributes">[];
+    parent: ASTNode;
+    children: ASTNode[];
   };
 };
 

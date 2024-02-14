@@ -27,6 +27,22 @@ export const optimizeSVG = (globPattern: string) => {
             },
           },
         },
+        {
+          name: "removeAttrs",
+          params: {
+            attrs: ["fill"],
+          },
+        },
+        {
+          name: "addAttributesToSVGElement",
+          params: {
+            attributes: [
+              {
+                fill: "currentColor",
+              },
+            ],
+          },
+        },
       ],
     });
 

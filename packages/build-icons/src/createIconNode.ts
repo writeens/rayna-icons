@@ -15,7 +15,6 @@ export const createIconNode = (
   const SVGWidth = parseInt(SVGElement.attr("width") || "", 10);
   const SVGHeight = parseInt(SVGElement.attr("height") || "", 10);
   const SVGViewBox = SVGElement.attr("viewBox") || "";
-  const SVGPath = SVGElement.html() ?? "";
   const SVGName = `${svg.fileName}-${svg.type}`;
   const ast = parseSync(svg.content);
 
@@ -62,8 +61,11 @@ export const createIconNode = (
     height: SVGHeight,
     viewBox: SVGViewBox,
     keywords: keywords[svg.fileName],
-    path: SVGPath,
     ast: {
+      parent: {
+        name: ast.name,
+        attributes: ast.attributes,
+      },
       children: ast.children.map((node) => ({
         name: node.name,
         attributes: node.attributes,
