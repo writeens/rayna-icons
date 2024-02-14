@@ -9,8 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
-    "outDir": "build",
-    "jsx": "react-jsx"
+    "jsx": "preserve"
   },
-  "include": ["src"]
+  "include": ["src", "**/*.test.tsx", "tests/vitest.setup.ts"]
 }

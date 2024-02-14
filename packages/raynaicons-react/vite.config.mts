@@ -1,4 +1,3 @@
-/// <reference types="vitest" />
 import path from "path";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
@@ -26,11 +25,6 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ["react", "react-dom"],
-    },
-    test: {
-      globals: true,
-      environment: "jsdom",
-      setupFiles: "./tests/setup.ts",
     },
     outDir: "build",
     copyPublicDir: false,
