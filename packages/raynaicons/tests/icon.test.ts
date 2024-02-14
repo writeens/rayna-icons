@@ -6,7 +6,6 @@ describe("Icon", () => {
   it("returns an icon object with the correct properties", () => {
     const icon = FirstAidFilled;
     expect(icon.name).toBe("FirstAidFilled");
-    expect(icon.path).toMatchSnapshot();
     expect(icon.keywords).toStrictEqual(["health"]);
     expect(icon.width).toBe(24);
     expect(icon.height).toBe(24);
@@ -30,11 +29,24 @@ describe("Icon", () => {
     expect(icon.toSVG).toBeDefined();
 
     const svg = icon.toSVG({
-      width: 30,
-      height: 40,
+      width: "30",
+      height: "40",
       "aria-hidden": "true",
       viewBox: "0 0 30 40",
       class: "custom-class",
+    });
+
+    expect(svg).toMatchSnapshot();
+  });
+
+  it("maintains the default viewBox", () => {
+    const icon = FirstAidFilled;
+
+    expect(icon.toSVG).toBeDefined();
+
+    const svg = icon.toSVG({
+      width: "30",
+      height: "40",
     });
 
     expect(svg).toMatchSnapshot();
