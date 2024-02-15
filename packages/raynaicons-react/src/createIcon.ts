@@ -10,11 +10,12 @@ export const createIcon = (iconNode: IconNode): RaynaIcon => {
         "svg",
         {
           ref,
+          ...iconNode.ast.parent.attributes,
           width: width ?? size ?? iconNode.width,
           height: height ?? size ?? iconNode.height,
           className: ["rayna", `rayna-${iconNode.name}`, className]
-            .join(" ")
-            .trim(),
+            .filter(Boolean)
+            .join(" "),
           ...rest,
         },
         [
@@ -40,7 +41,7 @@ const toCamelCase = (kebabCase: string) =>
     })
     .join("");
 
-/** Prefer camel case for React attributes */
+/** Prefer camelCase for React attributes */
 const toReactAttributes = (attributes: Record<string, string>) =>
   Object.entries(attributes).reduce(
     (acc, [key, value]) => {
