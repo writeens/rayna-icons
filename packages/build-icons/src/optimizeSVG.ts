@@ -24,13 +24,16 @@ export const optimizeSVG = (globPattern: string) => {
           params: {
             overrides: {
               removeViewBox: false,
+              removeUselessStrokeAndFill: {
+                fill: false,
+              },
             },
           },
         },
         {
           name: "removeAttrs",
           params: {
-            attrs: ["fill"],
+            attrs: ["fill", "clip-rule"],
           },
         },
         {
