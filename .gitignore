@@ -5,3 +5,6 @@ build
 
 # Generated folder
 packages/**/*/__generated__
+
+# Packed files
+**/*.tgz
