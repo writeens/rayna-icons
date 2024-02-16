@@ -1,13 +1,7 @@
-# @writeens/raynaicons-react
+# raynaicons-react
 
 ## 0.1.0
 
 ### Minor Changes
 
-- Release first minor version
-
-## 0.0.2
-
-### Patch Changes
-
-- Release v0.0.2
+- Release v0.1.0 after package rename
