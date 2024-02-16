@@ -1,13 +1,13 @@
 {
-  "name": "@writeens/build-icons",
-  "version": "0.0.1",
+  "name": "build-icons",
+  "version": "0.0.0",
   "private": true,
   "license": "MIT",
   "author": {
     "name": "Adewusi Victor",
     "email": "adewusi.victorg@gmail.com"
   },
-  "repository": "@writeens/rayna-icons",
+  "repository": "writeens/raynaicons",
   "main": "./src/index.ts",
   "types": "./src/index.d.ts",
   "devDependencies": {

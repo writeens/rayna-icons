@@ -1,5 +1,5 @@
 {
-  "name": "@writeens/raynaicons-monorepo",
+  "name": "raynaicons-monorepo",
   "private": true,
   "workspaces": [
     "packages/*"

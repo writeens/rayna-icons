@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { it, describe, expect } from "vitest";
 // Build the iconfiles first to remove squiggly lines
 import { FirstAidFilled, FirstAidOutlined } from "../src/__generated__";
