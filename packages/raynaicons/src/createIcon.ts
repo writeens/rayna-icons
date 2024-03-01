@@ -25,6 +25,7 @@ const toSVG =
     viewBox = icon.viewBox,
     size,
     class: className,
+    title,
     ...rest
   }: RaynaIconAttributes = {}) => {
     const newAttributes = {
@@ -40,6 +41,15 @@ const toSVG =
       attributes: { ...icon.ast.parent.attributes, ...newAttributes },
     };
     const svg = createElementFromNode(svgNode);
+
+    if (title) {
+      const titleElement = createElementFromNode({
+        name: "title",
+        attributes: {},
+      });
+      titleElement.textContent = `${title}`;
+      svg.appendChild(titleElement);
+    }
 
     icon.ast.children.forEach((node) => {
       const element = createElementFromNode(node);
