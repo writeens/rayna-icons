@@ -1,18 +1,18 @@
 /* eslint-disable no-use-before-define */
-import { IconNode } from "@writeens/build-icons";
+import { IconNode } from "build-icons";
 import { forwardRef, createElement } from "react";
 import type { RaynaIcon, RaynaProps } from "./types";
 
 export const createIcon = (iconNode: IconNode): RaynaIcon => {
   const Component = forwardRef<SVGSVGElement, RaynaProps>(
-    ({ width, height, title, size = 24, className, ...rest }, ref) =>
+    ({ width, height, title, size, className, ...rest }, ref) =>
       createElement(
         "svg",
         {
           ref,
           ...iconNode.ast.parent.attributes,
-          width: width ?? size ?? iconNode.width,
-          height: height ?? size ?? iconNode.height,
+          width: size ?? width ?? iconNode.width,
+          height: size ?? height ?? iconNode.height,
           className: ["rayna", `rayna-${iconNode.name}`, className]
             .filter(Boolean)
             .join(" "),
