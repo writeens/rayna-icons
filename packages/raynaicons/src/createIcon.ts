@@ -1,4 +1,4 @@
-import { IconNode } from "@writeens/build-icons";
+import { IconNode } from "build-icons";
 import { RaynaIcon, RaynaIconAttributes } from "./types";
 
 const createElementFromNode = (node: {
@@ -19,31 +19,29 @@ const createElementFromNode = (node: {
 
 const toSVG =
   (icon: IconNode) =>
-  (attributes: RaynaIconAttributes = {}) => {
-    const {
-      width: defaultWidth,
-      height: defaultHeight,
-      viewBox: defaultViewBox,
-      ast,
-    } = icon;
-
-    const defaultClassName = `rayna rayna-${icon.name}`;
-
+  ({
+    width,
+    height,
+    viewBox = icon.viewBox,
+    size,
+    class: className,
+    ...rest
+  }: RaynaIconAttributes = {}) => {
     const newAttributes = {
-      ...attributes,
-      width: attributes.width ?? defaultWidth,
-      height: attributes.height ?? defaultHeight,
-      viewBox: attributes.viewBox ?? defaultViewBox,
-      class: [defaultClassName, attributes.class].filter(Boolean).join(" "),
+      width: size ?? width ?? icon.width,
+      height: size ?? height ?? icon.height,
+      viewBox,
+      class: [`rayna rayna-${icon.name}`, className].filter(Boolean).join(" "),
+      ...rest,
     };
 
     const svgNode = {
-      ...ast.parent,
-      attributes: { ...ast.parent.attributes, ...newAttributes },
+      ...icon.ast.parent,
+      attributes: { ...icon.ast.parent.attributes, ...newAttributes },
     };
     const svg = createElementFromNode(svgNode);
 
-    ast.children.forEach((node) => {
+    icon.ast.children.forEach((node) => {
       const element = createElementFromNode(node);
       svg.appendChild(element);
     });
