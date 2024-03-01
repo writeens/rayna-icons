@@ -1,4 +1,4 @@
-import { buildIconFiles } from "@writeens/build-icons";
+import { buildIconFiles } from "build-icons";
 
 buildIconFiles({
   outputDirectory: "./src/__generated__",
