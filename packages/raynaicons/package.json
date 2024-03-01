@@ -28,7 +28,7 @@
     "test:size": "bundlesize"
   },
   "devDependencies": {
-    "@writeens/build-icons": "workspace:*"
+    "build-icons": "workspace:*"
   },
   "keywords": [
     "Icon",
