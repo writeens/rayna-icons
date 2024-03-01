@@ -20,6 +20,9 @@ describe("Icon", () => {
 
     const svg = icon.toSVG();
 
+    const titleElement = svg.children[0];
+
+    expect(titleElement).not.toHaveTextContent("Hello World");
     expect(svg).toHaveAttribute("width", "24");
     expect(svg).toHaveAttribute("height", "24");
     expect(svg).toHaveAttribute("viewBox", "0 0 24 24");
@@ -88,5 +91,19 @@ describe("Icon", () => {
 
     expect(svg).toHaveAttribute("width", "40");
     expect(svg).toHaveAttribute("height", "40");
+  });
+
+  it("should generate a title tag within the SVG if a title is passed", () => {
+    const icon = FirstAidFilled;
+
+    expect(icon.toSVG).toBeDefined();
+
+    const svg = icon.toSVG({
+      title: "Hello World",
+    });
+
+    const titleElement = svg.children[0];
+
+    expect(titleElement).toHaveTextContent("Hello World");
   });
 });
