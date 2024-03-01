@@ -10,5 +10,5 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true
   },
-  "include": ["src"]
+  "include": ["src", "tests/vitest.setup.ts", "**/*.test.ts"]
 }
