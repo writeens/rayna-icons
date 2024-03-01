@@ -1,0 +1,64 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  raynaicons:
+    name: Raynaicons (JS)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.18.2
+
+      - name: Install PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build package
+        run: pnpm build:raynaicons
+
+      - name: Lint package
+        run: pnpm lint:raynaicons
+
+      - name: Test package
+        run: pnpm test:raynaicons
+
+  raynaicons-react:
+    name: Raynaicons (React)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.18.2
+
+      - name: Install PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build package
+        run: pnpm build:raynaicons-react
+
+      - name: Lint package
+        run: pnpm lint:raynaicons-react
+
+      - name: Test package
+        run: pnpm test:raynaicons-react

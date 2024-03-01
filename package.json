@@ -5,8 +5,12 @@
     "packages/*"
   ],
   "scripts": {
-    "build:raynaicons": "pnpm --filter @writeens/raynaicons build",
-    "build:raynaicons-react": "pnpm --filter @writeens/raynaicons-react build",
+    "build:raynaicons": "pnpm --filter raynaicons build",
+    "build:raynaicons-react": "pnpm --filter raynaicons-react build",
+    "test:raynaicons": "pnpm --filter raynaicons test",
+    "test:raynaicons-react": "pnpm --filter raynaicons-react test",
+    "lint:raynaicons": "pnpm --filter raynaicons lint",
+    "lint:raynaicons-react": "pnpm --filter raynaicons-react lint",
     "build": "pnpm -r build",
     "changeset:run": "changeset",
     "changeset:version": "changeset version",
