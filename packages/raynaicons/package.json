@@ -25,7 +25,8 @@
     "dev": "vite serve ./public",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:size": "bundlesize"
+    "test:size": "bundlesize",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "build-icons": "workspace:*"

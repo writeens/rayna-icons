@@ -24,7 +24,8 @@
     "build": "pnpm build:icons && vite build && pnpm build:types && pnpm test:size",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:size": "bundlesize"
+    "test:size": "bundlesize",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@testing-library/react": "^14.2.1",
