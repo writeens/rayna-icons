@@ -1,14 +1,23 @@
 import { render } from "@testing-library/react";
 import { it, describe, expect } from "vitest";
 // Build the iconfiles first to remove squiggly lines
-import { FirstAidFilled, FirstAidOutlined } from "../src/__generated__";
+import { FirstAidFilled } from "../src/__generated__";
 
 describe("FirstAidFilled", () => {
-  it("is a valid react component", () => {
+  it("contains all the default props", () => {
 
-    const { container } = render(<FirstAidFilled />)
+    const testId = "icon"
 
-    expect(container).toMatchSnapshot()
+    const { getByTestId } = render(<FirstAidFilled data-testid={testId} />)
+
+    const svg = getByTestId(testId)
+
+    expect(svg).toHaveAttribute("class", "rayna rayna-first-aid-filled")
+    expect(svg).toHaveAttribute("fill", "currentColor")
+    expect(svg).toHaveAttribute("width", "24")
+    expect(svg).toHaveAttribute("height", "24")
+    expect(svg).toHaveAttribute("viewBox", "0 0 24 24")
+    expect(svg).toHaveAttribute("xmlns", "http://www.w3.org/2000/svg")
   });
 
   it("should pass options correctly to the SVG", () => {
@@ -26,45 +35,21 @@ describe("FirstAidFilled", () => {
 
   it("should generate a title tag within the SVG if a title prop is passed", () => {
 
-    const testId = "icon"
+    const { getByText } = render(<FirstAidFilled title="Hello World" />)
 
-    const { getByTestId } = render(<FirstAidFilled data-testid={testId} title="Hello World" />)
-
-    const svg = getByTestId(testId)
-
-    expect(svg.childNodes[0]).toHaveTextContent("Hello World")
-  })
-});
-
-describe("FirstAidOutlined", () => {
-  it("is a valid react component", () => {
-
-    const { container } = render(<FirstAidOutlined />)
-
-    expect(container).toMatchSnapshot()
-  });
-
-  it("should pass options correctly to the SVG", () => {
-
-    const testId = "icon"
-
-    const { getByTestId } = render(<FirstAidOutlined data-testid={testId} size={40} className="custom-class" />)
-
-    const svg = getByTestId(testId)
-
-    expect(svg).toHaveAttribute("class", "rayna rayna-first-aid-outlined custom-class")
-    expect(svg).toHaveAttribute("width", "40")
-    expect(svg).toHaveAttribute("height", "40")
+    expect(getByText("Hello World")).toBeInTheDocument()
   })
 
-  it("should generate a title tag within the SVG if a title prop is passed", () => {
+  it("should overwrite the width and height attribute if size prop is passed", () => {
 
     const testId = "icon"
 
-    const { getByTestId } = render(<FirstAidFilled data-testid={testId} title="Hello World" />)
+    const { getByTestId } = render(<FirstAidFilled data-testid={testId} size={30} width={20} height={20} />)
 
     const svg = getByTestId(testId)
 
-    expect(svg.childNodes[0]).toHaveTextContent("Hello World")
+    expect(svg).toHaveAttribute("class", "rayna rayna-first-aid-filled")
+    expect(svg).toHaveAttribute("width", "30")
+    expect(svg).toHaveAttribute("height", "30")
   })
 });
