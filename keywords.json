@@ -1,3 +1,4 @@
 {
-  "first-aid": ["health"]
+  "first-aid": ["health"],
+  "heart-beat": ["health"]
 }
