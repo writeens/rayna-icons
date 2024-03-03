@@ -15,7 +15,7 @@
 
 ## Libraries
 
-This monorepo is made up of two libraries. They can be found in the `package/` folder.
+This monorepo is made up of two libraries. They can be found in the `packages/` folder.
 
 | Package                                                                                                 | Version                                                                                             |
 | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
