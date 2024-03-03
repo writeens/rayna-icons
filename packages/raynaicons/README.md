@@ -1,6 +1,15 @@
-# raynaicons
+![icons](../../assets/icons.png)
 
-[![npm version](https://img.shields.io/npm/v/raynaicons)](https://www.npmjs.org/package/raynaicons)
+<h1 align="center">raynaicons</h1>
+
+<p align="center">
+  <a href="https://github.com/writeens/raynaicons/blob/master/license">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a aria-label="build status" href="https://github.com/writeens/raynaicons/actions/workflows/ci.yml">
+    <img alt="" src="https://github.com/writeens/raynaicons/actions/workflows/ci.yml/badge.svg?branch=main&event=push">
+  </a>
+</p>
 
 ## Installing
 
