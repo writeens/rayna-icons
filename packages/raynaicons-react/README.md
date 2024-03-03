@@ -1,6 +1,6 @@
-![icons](../../assets/icons.png)
+![icons](https://raw.githubusercontent.com/writeens/raynaicons/main/assets/icons.png)
 
-<h1 align="center">raynaicons-react</h1>
+# raynaicons-react
 
 <p align="center">
   <a href="https://github.com/writeens/raynaicons/blob/master/license">
