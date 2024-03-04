@@ -1,5 +1,17 @@
 # raynaicons
 
+## 0.2.3
+
+### Patch Changes
+
+- Update READMEs
+
+## 0.2.2
+
+### Patch Changes
+
+- update READMEs
+
 ## 0.2.1
 
 ### Patch Changes

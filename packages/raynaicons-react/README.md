@@ -1,19 +1,17 @@
 ![icons](https://raw.githubusercontent.com/writeens/raynaicons/main/assets/icons.png)
 
-# raynaicons-react
+## raynaicons-react
 
 <p align="center">
   <a href="https://github.com/writeens/raynaicons/blob/master/license">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
   <a aria-label="build status" href="https://github.com/writeens/raynaicons/actions/workflows/ci.yml">
-    <img alt="" src="https://github.com/writeens/raynaicons/actions/workflows/ci.yml/badge.svg?branch=main&event=push">
+    <img alt="" src="https://github.com/writeens/raynaicons/actions/workflows/ci.yml/badge.svg?branch=main&event=push" />
   </a>
 </p>
 
 ## Installing
-
-### Package manager
 
 Using npm:
 
@@ -41,14 +39,16 @@ After installing `raynaicons-react`, you can import each icon individually as a 
 import { FirstAidFilled } from "raynaicons-react";
 
 function CustomIcon() {
-  <div>
-    <FirstAidFilled
-      className="h-6 w-6 custom-class"
-      size={30}
-      title="Hello World"
-      aria-hidden={false}
-    />
-    <p>...</p>
-  </div>;
+  return (
+    <div>
+      <FirstAidFilled
+        className="custom-class"
+        size={30}
+        title="Hello World"
+        aria-hidden={false}
+      />
+      <p>...</p>
+    </div>
+  );
 }
 ```
