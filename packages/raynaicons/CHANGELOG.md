@@ -1,5 +1,11 @@
 # raynaicons
 
+## 0.2.4
+
+### Patch Changes
+
+- Update README across monorepo
+
 ## 0.2.3
 
 ### Patch Changes
