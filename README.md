@@ -13,6 +13,9 @@
   </a>
 </p>
 
+> [!WARNING]  
+> The libraries contained in this monorepo are not ready for use in a production environment. They are missing 250+ icons. These icons will be added soon.
+
 ## Libraries
 
 This monorepo is made up of two libraries. They can be found in the `packages/` folder.
@@ -31,7 +34,3 @@ If you found a bug, or you have general feedback about any of the libraries, ope
 ### Request an Icon
 
 To request for a new icon to be added to the library, open an issue using the icon request template.
-
-## License
-
-This library is MIT licensed.

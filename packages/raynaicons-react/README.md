@@ -11,6 +11,9 @@
   </a>
 </p>
 
+> [!WARNING]  
+> This library is not ready for use in a production environment. It is missing 250+ icons. These icons will be added soon.
+
 ## Installing
 
 Using npm:
