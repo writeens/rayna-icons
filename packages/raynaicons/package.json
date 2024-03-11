@@ -7,7 +7,7 @@
     "email": "adewusi.victorg@gmail.com"
   },
   "repository": "writeens/raynaicons",
-  "homepage": "writeens/raynaicons",
+  "homepage": "https://github.com/writeens/raynaicons",
   "main": "./build/index.cjs",
   "module": "./build/index.mjs",
   "types": "./build/index.d.ts",
